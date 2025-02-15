@@ -17,16 +17,16 @@ class CategoryButton extends StatelessWidget {
       onPressed: onPressed,
       style: TextButton.styleFrom(
           backgroundColor: AppColors.categoryButtonBackgroundWhiteThemeColor,
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: MainPagePaddings.categoryButtonInsideHorizontal,
           )),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(
-                bottom: MainPagePaddings.categoryButtonTextUp),
+          const Padding(
+            padding:
+                EdgeInsets.only(bottom: MainPagePaddings.categoryButtonTextUp),
             child: Text(
               AppStrings.categoryButton,
               style: AppTextStyles.categoryButtonTextWhiteTheme,
@@ -40,7 +40,7 @@ class CategoryButton extends StatelessWidget {
               ImageSource.triangleArrowRight,
               height: MainPageSizes.categoryButtonIconHeight,
               colorFilter:
-                  ColorFilter.mode(AppColors.blackColor, BlendMode.srcIn),
+                  const ColorFilter.mode(AppColors.blackColor, BlendMode.srcIn),
             ),
           ),
         ],

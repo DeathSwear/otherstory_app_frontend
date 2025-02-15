@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:otherstory_app/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/category_button.dart';
-import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
-import 'package:otherstory_app/theme/image_source.dart';
 
 class Category extends StatelessWidget {
   final String title;

@@ -53,4 +53,42 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: -0.45,
   );
+
+  static const categoryItemNameWhiteTheme = TextStyle(
+    //Headline/Regular
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
+  );
+  static const categoryItemNameBlackTheme = TextStyle(
+    //Headline/Regular
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
+
+  static const categoryItemNameForeground = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 18,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
+
+  static const categoryItemDescription1 = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
+  static const categoryItemDescription2 = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.labels2Color,
+    letterSpacing: -0.08,
+  );
 }
