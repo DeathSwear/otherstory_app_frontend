@@ -91,4 +91,11 @@ class AppTextStyles {
     color: AppColors.labels2Color,
     letterSpacing: -0.08,
   );
+  static const categoryItemDescription3 = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.08,
+  );
 }

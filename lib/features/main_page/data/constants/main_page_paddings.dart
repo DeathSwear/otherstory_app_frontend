@@ -6,5 +6,6 @@ class MainPagePaddings {
   static const double categoryButtonIconRight = 2;
   static const double categoryButtonIconLeft = 5;
   static const double categoryCoursesImageNameAll = 4;
-  static const double categoryCoursesNameBottom = 4;
+  static const double categoryItemSpacer = 4;
+  static const double categoryMeditationInside = 8;
 }

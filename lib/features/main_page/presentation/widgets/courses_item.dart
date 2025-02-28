@@ -41,7 +41,7 @@ class CoursesItem extends StatelessWidget {
             style: AppTextStyles.categoryItemNameWhiteTheme,
           ),
           const SizedBox(
-            height: MainPagePaddings.categoryCoursesNameBottom,
+            height: MainPagePaddings.categoryItemSpacer,
           ),
           Text(
             data.decsription,

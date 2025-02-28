@@ -4,4 +4,8 @@ class MainPageSizes {
   static const double categoryCoursesImageWidth = 260;
   static const double categoryCoursesScrollHeight = 208;
   static const double categoryCoursesImageClipRadius = 8;
+  static const double categoryMeditationImageHeight = 320;
+  static const double categoryMeditationImageWidth = 260;
+  static const double categoryMeditationScrollHeight = 320;
+  static const double categoryMeditationImageClipRadius = 8;
 }

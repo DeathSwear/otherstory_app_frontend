@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:otherstory_app/features/main_page/data/constants/main_page_sizes.dart';
+import 'package:otherstory_app/features/main_page/data/models/courses_item_data.dart';
+import 'package:otherstory_app/features/main_page/data/models/meditations_item_data.dart';
+import 'package:otherstory_app/features/main_page/presentation/widgets/category.dart';
+import 'package:otherstory_app/features/main_page/presentation/widgets/courses_item.dart';
+import 'package:otherstory_app/features/main_page/presentation/widgets/meditation_item.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -15,7 +21,134 @@ class _MainScreenState extends State<MainScreen> {
       decoration: BoxDecoration(
           color: AppColors.whiteColor,
           border: Border.all(color: AppColors.blackColor, width: 1)),
-      child: const Center(child: Text('MainScreen')),
+      child: ListView(
+        children: [
+          Category(
+            title: 'Курсы',
+            height: MainPageSizes.categoryCoursesScrollHeight,
+            children: [
+              CoursesItem(
+                onPressed: () {},
+                data: CoursesItemData(
+                    name: 'Практика медитации',
+                    decsription:
+                        'Не очень длинное но интригуещее описание на две строчки',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              CoursesItem(
+                onPressed: () {},
+                data: CoursesItemData(
+                    name: 'Практика медитации',
+                    decsription:
+                        'Не очень длинное но интригуещее описание на две строчки',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              CoursesItem(
+                onPressed: () {},
+                data: CoursesItemData(
+                    name: 'Практика медитации',
+                    decsription:
+                        'Не очень длинное но интригуещее описание на две строчки',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              CoursesItem(
+                onPressed: () {},
+                data: CoursesItemData(
+                    name: 'Практика медитации',
+                    decsription:
+                        'Не очень длинное но интригуещее описание на две строчки',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              CoursesItem(
+                onPressed: () {},
+                data: CoursesItemData(
+                    name: 'Практика медитации',
+                    decsription:
+                        'Не очень длинное но интригуещее описание на две строчки',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+            ],
+          ),
+          Category(
+              title: 'Медитация',
+              height: MainPageSizes.categoryMeditationScrollHeight,
+              children: [
+                Material(
+                  child: InkWell(
+                    onTap: () {
+                      print('cat tapped');
+                      setState(() {});
+                    },
+                    child: MeditationsItem(
+                        onPressed: () {},
+                        data: MeditationsItemData(
+                            name:
+                                'Денежная медитация от стесса и беспокойного мозга',
+                            decsription:
+                                'Не очень длинное но интригующее описание на две строчки',
+                            imageSource:
+                                'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+                            hours: '5 часов')),
+                  ),
+                ),
+                MeditationsItem(
+                    onPressed: () {},
+                    data: MeditationsItemData(
+                        name:
+                            'Денежная медитация от стесса и беспокойного мозга',
+                        decsription:
+                            'Не очень длинное но интригующее описание на две строчки',
+                        imageSource:
+                            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+                        hours: '5 часов')),
+                MeditationsItem(
+                    onPressed: () {},
+                    data: MeditationsItemData(
+                        name:
+                            'Денежная медитация от стесса и беспокойного мозга',
+                        decsription:
+                            'Не очень длинное но интригующее описание на две строчки',
+                        imageSource:
+                            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+                        hours: '5 часов')),
+                MeditationsItem(
+                    onPressed: () {},
+                    data: MeditationsItemData(
+                        name:
+                            'Денежная медитация от стесса и беспокойного мозга',
+                        decsription:
+                            'Не очень длинное но интригующее описание на две строчки',
+                        imageSource:
+                            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+                        hours: '5 часов')),
+                MeditationsItem(
+                    onPressed: () {},
+                    data: MeditationsItemData(
+                        name:
+                            'Денежная медитация от стесса и беспокойного мозга',
+                        decsription:
+                            'Не очень длинное но интригующее описание на две строчки',
+                        imageSource:
+                            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+                        hours: '5 часов')),
+                MeditationsItem(
+                    onPressed: () {},
+                    data: MeditationsItemData(
+                        name:
+                            'Денежная медитация от стесса и беспокойного мозга',
+                        decsription:
+                            'Не очень длинное но интригующее описание на две строчки',
+                        imageSource:
+                            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+                        hours: '5 часов')),
+              ]),
+        ],
+      ),
     );
   }
 }

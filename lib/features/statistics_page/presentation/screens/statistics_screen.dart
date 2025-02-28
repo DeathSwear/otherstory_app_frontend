@@ -15,7 +15,9 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
       decoration: BoxDecoration(
           color: AppColors.whiteColor,
           border: Border.all(color: AppColors.blackColor, width: 1)),
-      child: const Center(child: Text('StatisticsScreen')),
+      child: const Center(
+        child: Text('StatisticsScreen'),
+      ),
     );
   }
 }
