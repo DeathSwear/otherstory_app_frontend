@@ -12,4 +12,7 @@ class MainPageSizes {
   static const double categoryAudioScrollHeight = 186;
   static const double categoryMusicImageSize = 140;
   static const double categoryMusicScrollHeight = 195;
+  static const double storiesImageSize = 104;
+  static const double storiesImageSizeImageClipRadius = 13;
+  static const double storiesBorderWidth = 2;
 }

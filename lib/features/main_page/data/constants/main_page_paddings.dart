@@ -8,4 +8,6 @@ class MainPagePaddings {
   static const double categoryItemSpacer = 4;
   static const double categoryItemImageBottom = 6;
   static const double categoryMeditationInside = 8;
+  static const double storiesImageNameAll = 8;
+  static const double storiesHorizontal = 8;
 }

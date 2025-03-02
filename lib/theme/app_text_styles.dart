@@ -98,4 +98,12 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: -0.08,
   );
+
+  static const storiesText = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 11,
+    color: AppColors.whiteColor,
+    letterSpacing: 0.06,
+  );
 }

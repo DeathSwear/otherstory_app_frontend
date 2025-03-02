@@ -4,11 +4,13 @@ import 'package:otherstory_app/features/main_page/data/models/audio_item_data.da
 import 'package:otherstory_app/features/main_page/data/models/courses_item_data.dart';
 import 'package:otherstory_app/features/main_page/data/models/meditations_item_data.dart';
 import 'package:otherstory_app/features/main_page/data/models/music_item_data.dart';
+import 'package:otherstory_app/features/main_page/data/models/stories_item_data.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/audio_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/category.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/courses_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/meditation_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/music_item.dart';
+import 'package:otherstory_app/features/main_page/presentation/widgets/stories_scroll.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -19,6 +21,29 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  List<StoriesItemData> storiesData = [
+    StoriesItemData(
+        imageSource:
+            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+        isChecked: false,
+        title: 'OSS Meet 5:\nКак работать \nменьше, а получать больше'),
+    StoriesItemData(
+        imageSource:
+            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+        isChecked: false,
+        title: 'Личностное развитие'),
+    StoriesItemData(
+        imageSource:
+            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+        isChecked: true,
+        title: 'Как начать радоваться мелочам'),
+    StoriesItemData(
+        imageSource:
+            'https://pic.rutubelist.ru/user/b5/e4/b5e47a7c6b9b9945e1971888da0fae13.jpg',
+        isChecked: true,
+        title: 'title'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,6 +52,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       child: ListView(
         children: [
+          StoriesScroll(data: storiesData),
           Category(
             title: 'Курсы',
             height: MainPageSizes.categoryCoursesScrollHeight,
