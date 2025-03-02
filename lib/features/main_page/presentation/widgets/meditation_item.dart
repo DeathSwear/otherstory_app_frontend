@@ -52,6 +52,14 @@ class MeditationsItem extends StatelessWidget {
               ],
             ),
           ),
+          Material(
+            color: Colors.transparent,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(
+                  MainPageSizes.categoryMeditationImageClipRadius),
+              onTap: onPressed,
+            ),
+          ),
         ],
       ),
     );

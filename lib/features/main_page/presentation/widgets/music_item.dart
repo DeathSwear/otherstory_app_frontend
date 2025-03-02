@@ -36,7 +36,7 @@ class MusicItem extends StatelessWidget {
           Text(
             data.decsription,
             style: AppTextStyles.categoryItemDescription1,
-          )
+          ),
         ],
       ),
     );
