@@ -3,10 +3,12 @@ import 'package:otherstory_app/features/main_page/data/constants/main_page_sizes
 import 'package:otherstory_app/features/main_page/data/models/audio_item_data.dart';
 import 'package:otherstory_app/features/main_page/data/models/courses_item_data.dart';
 import 'package:otherstory_app/features/main_page/data/models/meditations_item_data.dart';
+import 'package:otherstory_app/features/main_page/data/models/music_item_data.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/audio_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/category.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/courses_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/meditation_item.dart';
+import 'package:otherstory_app/features/main_page/presentation/widgets/music_item.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -20,9 +22,9 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          border: Border.all(color: AppColors.blackColor, width: 1)),
+      decoration: const BoxDecoration(
+        color: AppColors.whiteColor,
+      ),
       child: ListView(
         children: [
           Category(
@@ -142,38 +144,76 @@ class _MainScreenState extends State<MainScreen> {
                         hours: '5 часов')),
               ]),
           Category(
+            title: 'Аудио подкасты',
+            height: MainPageSizes.categoryAudioScrollHeight,
+            children: [
+              AudioItem(
+                onPressed: () {},
+                data: AudioItemData(
+                    name: 'Детская позиция',
+                    decsription: 'Буквально пара строк описания',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              AudioItem(
+                onPressed: () {},
+                data: AudioItemData(
+                    name: 'Детская позиция',
+                    decsription: 'Буквально пара строк описания',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              AudioItem(
+                onPressed: () {},
+                data: AudioItemData(
+                    name: 'Детская позиция',
+                    decsription: 'Буквально пара строк описания',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+              AudioItem(
+                onPressed: () {},
+                data: AudioItemData(
+                    name: 'Детская позиция',
+                    decsription: 'Буквально пара строк описания',
+                    imageSource:
+                        'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
+              ),
+            ],
+          ),
+          Category(
               title: 'Аудио подкасты',
-              height: MainPageSizes.categoryAudioScrollHeight,
+              height: MainPageSizes.categoryMusicScrollHeight,
               children: [
-                AudioItem(
+                MusicItem(
                   onPressed: () {},
-                  data: AudioItemData(
-                      name: 'Детская позиция',
-                      decsription: 'Буквально пара строк описания',
+                  data: MusicItemData(
+                      name: 'Глухой лес',
+                      decsription: '15 минут',
                       imageSource:
                           'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                 ),
-                AudioItem(
+                MusicItem(
                   onPressed: () {},
-                  data: AudioItemData(
-                      name: 'Детская позиция',
-                      decsription: 'Буквально пара строк описания',
+                  data: MusicItemData(
+                      name: 'Звонкие склоны',
+                      decsription: '21 минут',
                       imageSource:
                           'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                 ),
-                AudioItem(
+                MusicItem(
                   onPressed: () {},
-                  data: AudioItemData(
-                      name: 'Детская позиция',
-                      decsription: 'Буквально пара строк описания',
+                  data: MusicItemData(
+                      name: 'Шумный берег',
+                      decsription: '12 минут',
                       imageSource:
                           'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                 ),
-                AudioItem(
+                MusicItem(
                   onPressed: () {},
-                  data: AudioItemData(
-                      name: 'Детская позиция',
-                      decsription: 'Буквально пара строк описания',
+                  data: MusicItemData(
+                      name: 'Глухой лес',
+                      decsription: '15 минут',
                       imageSource:
                           'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                 ),

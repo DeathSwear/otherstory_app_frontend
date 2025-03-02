@@ -9,5 +9,7 @@ class MainPageSizes {
   static const double categoryMeditationScrollHeight = 320;
   static const double categoryMeditationImageClipRadius = 8;
   static const double categoryAudioImageSize = 140;
-  static const double categoryAudioScrollHeight = 196;
+  static const double categoryAudioScrollHeight = 186;
+  static const double categoryMusicImageSize = 140;
+  static const double categoryMusicScrollHeight = 195;
 }

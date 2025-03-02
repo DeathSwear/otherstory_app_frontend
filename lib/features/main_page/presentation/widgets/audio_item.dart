@@ -13,7 +13,7 @@ class AudioItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MainPageSizes.categoryCoursesImageWidth,
+      width: MainPageSizes.categoryAudioImageSize,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
