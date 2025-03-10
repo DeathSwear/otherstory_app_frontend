@@ -24,4 +24,5 @@ class AppColors {
   static Color black25Color = Color.fromARGB((255 * 0.25).toInt(), 0, 0, 0);
 
   static const Color checkedStoryColor = Color.fromRGBO(60, 60, 67, 0.18);
+  static const Color cardsBackColor = Color.fromRGBO(131, 22, 74, 1);
 }

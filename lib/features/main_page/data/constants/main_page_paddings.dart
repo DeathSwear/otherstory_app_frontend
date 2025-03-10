@@ -10,4 +10,7 @@ class MainPagePaddings {
   static const double categoryMeditationInside = 8;
   static const double storiesImageNameAll = 8;
   static const double storiesHorizontal = 8;
+  static const double basicVerticalSpacer = 28;
+  static const double headerVertical = 9;
+  static const double headerAdditionalSpacer = 3;
 }

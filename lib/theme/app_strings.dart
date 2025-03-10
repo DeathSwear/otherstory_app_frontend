@@ -3,4 +3,5 @@ class AppStrings {
   static const String navStatistics = 'Обо мне';
   static const String navProfile = 'Профиль';
   static const String categoryButton = 'Перейти';
+  static const String mainScreenTitle = 'Доброе утро';
 }

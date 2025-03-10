@@ -22,34 +22,46 @@ class MeditationsItem extends StatelessWidget {
             width: MainPageSizes.categoryMeditationImageWidth,
             imageSource: data.imageSource,
             clipRadius: MainPageSizes.categoryMeditationImageClipRadius,
-            darken: true,
           ),
-          Padding(
-            padding:
-                const EdgeInsets.all(MainPagePaddings.categoryMeditationInside),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  data.name,
-                  style: AppTextStyles.categoryItemNameForeground,
+          DecoratedBox(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                  Colors.transparent,
+                  Color.fromARGB(255, 223, 161, 80),
+                ])),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(
+                    MainPagePaddings.categoryMeditationInside),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      data.name,
+                      style: AppTextStyles.categoryItemNameForeground,
+                    ),
+                    const SizedBox(
+                      height: MainPagePaddings.categoryItemSpacer,
+                    ),
+                    Text(
+                      data.decsription,
+                      style: AppTextStyles.categoryItemDescription1,
+                    ),
+                    const SizedBox(
+                      height: MainPagePaddings.categoryItemSpacer,
+                    ),
+                    Text(
+                      data.hours,
+                      style: AppTextStyles.categoryItemDescription3,
+                    ),
+                  ],
                 ),
-                const SizedBox(
-                  height: MainPagePaddings.categoryItemSpacer,
-                ),
-                Text(
-                  data.decsription,
-                  style: AppTextStyles.categoryItemDescription1,
-                ),
-                const SizedBox(
-                  height: MainPagePaddings.categoryItemSpacer,
-                ),
-                Text(
-                  data.hours,
-                  style: AppTextStyles.categoryItemDescription3,
-                ),
-              ],
+              ),
             ),
           ),
           Material(

@@ -81,7 +81,7 @@ class AppTextStyles {
     //Days One
     fontWeight: FontWeight.w400,
     fontSize: 13,
-    color: AppColors.labels1Color,
+    color: AppColors.labels2Color,
     letterSpacing: -0.08,
   );
   static const categoryItemDescription2 = TextStyle(
@@ -105,5 +105,27 @@ class AppTextStyles {
     fontSize: 11,
     color: AppColors.whiteColor,
     letterSpacing: 0.06,
+  );
+  static const screenTitle = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 34,
+    color: AppColors.blackColor,
+    letterSpacing: 0.06,
+  );
+
+  static const mainscreenCardsDecription = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.08,
+  );
+  static const mainscreenCardsTitle = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 28,
+    color: AppColors.whiteColor,
+    letterSpacing: 0.38,
   );
 }
