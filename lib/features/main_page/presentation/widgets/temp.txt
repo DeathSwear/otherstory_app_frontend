@@ -1,1 +1,0 @@
-It's for labeling a folder on github.

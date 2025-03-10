@@ -57,25 +57,25 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
         child: BottomNavigationBar(
           selectedLabelStyle: AppTextStyles.navLabelActiveWhiteTheme,
           unselectedLabelStyle: AppTextStyles.navLabelInactiveWhiteTheme,
-          selectedItemColor: AppColors.navActiveWhiteTheme,
+          selectedItemColor: AppColors.navActiveWhiteThemeColor,
           currentIndex: widget.navigationShell.currentIndex,
           onTap: (int index) => _onTap(context, index),
           items: [
             getBottomNavigationBarItem(
-              AppColors.navActiveWhiteTheme,
-              AppColors.navInactiveWhiteTheme,
+              AppColors.navActiveWhiteThemeColor,
+              AppColors.navInactiveWhiteThemeColor,
               ImageSource.navHome,
               AppStrings.navHome,
             ),
             getBottomNavigationBarItem(
-              AppColors.navActiveWhiteTheme,
-              AppColors.navInactiveWhiteTheme,
+              AppColors.navActiveWhiteThemeColor,
+              AppColors.navInactiveWhiteThemeColor,
               ImageSource.navHeart,
               AppStrings.navStatistics,
             ),
             getBottomNavigationBarItem(
-              AppColors.navActiveWhiteTheme,
-              AppColors.navInactiveWhiteTheme,
+              AppColors.navActiveWhiteThemeColor,
+              AppColors.navInactiveWhiteThemeColor,
               ImageSource.navProfile,
               AppStrings.navProfile,
             ),
