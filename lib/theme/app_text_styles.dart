@@ -53,6 +53,27 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: -0.45,
   );
+  static const profileTitleWhiteTheme = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.blackColor,
+    letterSpacing: -0.45,
+  );
+    static const profileTitleBlackTheme = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.45,
+  );
+    static const profileSubtitleWhiteTheme = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.23,
+  );
 
   static const categoryItemNameWhiteTheme = TextStyle(
     //Headline/Regular
