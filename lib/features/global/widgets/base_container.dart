@@ -25,7 +25,7 @@ class BaseContainer extends StatelessWidget {
       alignment: alignment,
       width: width,
       height: height,
-      padding: const EdgeInsets.symmetric(horizontal: 13),
+      padding: padding,
       margin: margin,
       decoration:
           BoxDecoration(color: color, borderRadius: BorderRadius.circular(13)),
