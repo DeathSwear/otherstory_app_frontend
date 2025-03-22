@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/profile_page_sizes.dart';
+
 class RoundedContainerCard extends StatelessWidget {
   const RoundedContainerCard({
     super.key,
@@ -13,7 +15,7 @@ class RoundedContainerCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(13),
+        borderRadius: BorderRadius.circular(ProfilePageSizes.containerRadius),
         color: Colors.white,
       ),
       child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:otherstory_app/features/profile_page/constants/profile_page_paddings.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_strings.dart';
 import '../widgets/widgets.dart';
@@ -20,44 +21,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: const [
             ProfileScreenHeader(),
             ProfileSection(),
-            SizedBox(height: 10),
+            SizedBox(height: ProfilePagePaddings.profileSectionBottom),
             RoundedContainerCard(children: [
               SettingsCard(
-                title: 'Управление подпиской',
+                title: AppStrings.cardSubscriptionManagement,
                 icon: 'assets/png/wallet.png',
               ),
             ]),
-            SizedBox(height: 24),
+            SizedBox(height: ProfilePagePaddings.profileCardBottom),
             RoundedContainerCard(children: [
               SettingsCard(
-                title: 'Уведомления и звуки',
+                title: AppStrings.cardNotificationsAndSounds,
                 icon: 'assets/png/wallet.png',
                 showDivider: true,
               ),
               SettingsCard(
-                title: 'Приватность и безопасность',
+                title: AppStrings.cardPrivacyAndSecurity,
                 icon: 'assets/png/wallet.png',
                 showDivider: true,
               ),
               SettingsCard(
-                title: 'Оформление',
+                title: AppStrings.cardDecor,
                 icon: 'assets/png/wallet.png',
                 showDivider: true,
               ),
               SettingsCard(
-                title: 'Язык',
+                title: AppStrings.cardLanguage,
                 icon: 'assets/png/wallet.png',
                 showDivider: false,
               ),
             ]),
-            SizedBox(height: 24),
+            SizedBox(height: ProfilePagePaddings.profileCardBottom),
             RoundedContainerCard(children: [
               SettingsCard(
-                title: 'Other FAQ',
+                title: AppStrings.cardFAQ,
                 icon: 'assets/png/wallet.png',
               ),
             ]),
-            SizedBox(height: 24),
+            SizedBox(height: ProfilePagePaddings.profileCardBottom),
             AppVersion(appVersion: AppStrings.appVersion),
           ],
         ));
