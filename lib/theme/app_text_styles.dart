@@ -53,6 +53,48 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: -0.45,
   );
+  static const profileTitleWhiteTheme = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.blackColor,
+    letterSpacing: -0.45,
+  );
+    static const profileTitleBlackTheme = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.45,
+  );
+    static const profileSubtitleWhiteTheme = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.23,
+  );
+  static const profileCardTitleWhiteTheme = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
+  );
+   static const profileCardTitleBlackTheme = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
+  static const profileAppVersion = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
 
   static const categoryItemNameWhiteTheme = TextStyle(
     //Headline/Regular
@@ -128,4 +170,5 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: 0.38,
   );
+  
 }

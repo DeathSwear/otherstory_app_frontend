@@ -25,4 +25,7 @@ class AppColors {
 
   static const Color checkedStoryColor = Color.fromRGBO(60, 60, 67, 0.18);
   static const Color cardsBackColor = Color.fromRGBO(131, 22, 74, 1);
+
+  static const Color profileScreenBackground = Color.fromRGBO(245, 245, 245, 1);
+  static const Color profileDividerColor = Color.fromRGBO(84, 84, 86, 0.34);
 }
