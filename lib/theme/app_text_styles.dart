@@ -60,18 +60,25 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.45,
   );
-    static const profileTitleBlackTheme = TextStyle(
+  static const profileTitleBlackTheme = TextStyle(
     //Days One
     fontWeight: FontWeight.w400,
     fontSize: 20,
     color: AppColors.whiteColor,
     letterSpacing: -0.45,
   );
-    static const profileSubtitleWhiteTheme = TextStyle(
+  static const profileSubtitleWhiteTheme = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w400,
     fontSize: 15,
     color: AppColors.labels1Color,
+    letterSpacing: -0.23,
+  );
+   static const statScreenHabitSettingsTextColor = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.blackColor,
     letterSpacing: -0.23,
   );
   static const profileCardTitleWhiteTheme = TextStyle(
@@ -81,7 +88,7 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.43,
   );
-   static const profileCardTitleBlackTheme = TextStyle(
+  static const profileCardTitleBlackTheme = TextStyle(
     //SF PRO
     fontWeight: FontWeight.w400,
     fontSize: 17,
@@ -93,6 +100,13 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 13,
     color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
+   static const habitsContainerTexctColor = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: AppColors.whiteColor,
     letterSpacing: -0.08,
   );
 
@@ -170,5 +184,47 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: 0.38,
   );
-  
+  static const statisticsTitleSectionEnable = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.45,
+  );
+  static const statisticsTitleSectionDissable = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.blackColor,
+    letterSpacing: -0.45,
+  );
+  static const statisticsAddNoteTitle = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.45,
+  );
+  static const statisticsAddNoteSubtitle = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.lightGreyColor,
+    letterSpacing: -0.08,
+  );
+
+  static const timeSectionSubtitleEnable = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.08,
+  );
+  static const timeSectionSubtitleDissable = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
 }

@@ -27,7 +27,7 @@ class ProfileSection extends StatelessWidget {
                 borderRadius: BorderRadius.circular(
                     ProfilePageSizes.profileCircleRadius)),
             child: Image.network(
-              'https://s3-alpha-sig.figma.com/img/97af/792b/ab0f189a88a16d50b16fe728fa0b5594?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iGkozjFccxw6tz2Zy~Xb~mWu5WYxXymKk0JJGZ1FcVEXf~GNJ4hoaMEQElQCO09V5jqgxXw2mYNc3P~nhWm3mm3metBf-eWbIZnfuCaIaF5GnDQWcO5pvazppbh7Nkz0FG0~TpPykBGZhtozri58plMna3143gXv275ZkjMUk12wrdK5pUC1lmTUhZPuRWFRMo-BYehfGv68uyAf5r3YPFKWJaSqAXXvkHqmcrFwbWcgsEbwU-KQ~77UpDUKTjMAeVsWy1U~y2OZOYfD8l8O0pMQBIhRA9I2K9950nOb-0OkXf9brDtqzSnHPrgcNHQilMhYAcu6AC8XR0VR3mz8KA__',
+              'https://s3-alpha-sig.figma.com/img/c6c4/ad15/629aef26d268554ca6a3335981bbcf30?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=TVRnbzASbFTBZsiL16RdskSXfhMwdjqacbBSAGJeRNEh-hA3kHqsWhk57iEnJjUGTwThKvRbVaN9wPHt57VDDybiB5Y1Y6M4aYk9y-hgFeGI28QJoIp~LpVbpBlBzHPGYyY2p43wY9ejRKMqwMX-TOrvD66Z9qMKZW2zB9kAEFyX918JOyxJ7eMsaAxLaC-q48bDdoABHiXTaW6e2u2vcaBs9INynPJOFLpHBvCyR20SUWGQFHKkZ2ufuSyIyANhxyDHFQvts2r-oxWHC1quZLcQ1VUaQk3l4sDnhlJ9bj7XHI0QGrettnGMnc38CNMhAFTiJJCgeazPd128pLjK9w__',
             ),
           ),
           const SizedBox(width: ProfilePagePaddings.profileAvatarRight),
