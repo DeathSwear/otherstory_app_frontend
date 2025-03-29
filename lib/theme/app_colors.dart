@@ -34,4 +34,5 @@ class AppColors {
 
   static const Color lightGreyColor = Color.fromRGBO(235, 235, 245, 0.6);
   static const Color addNoteContainerColor = Color.fromRGBO(67, 51, 115, 1);
+  static const Color employmentContainerColor = Color.fromRGBO(62, 71, 99, 1);
 }

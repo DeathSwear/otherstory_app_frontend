@@ -67,6 +67,13 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: -0.45,
   );
+    static const employmentSectionTitle = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.45,
+  );
   static const profileSubtitleWhiteTheme = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w400,
@@ -88,6 +95,13 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.43,
   );
+    static const statisticResultButtonTextColor = TextStyle(
+    //Days one
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
   static const profileCardTitleBlackTheme = TextStyle(
     //SF PRO
     fontWeight: FontWeight.w400,
@@ -100,6 +114,20 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 13,
     color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
+   static const employmentSectionSubtitle = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.lightGreyColor,
+    letterSpacing: -0.08,
+  );
+   static const employmentSectionTime = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.lightGreyColor,
     letterSpacing: -0.08,
   );
    static const habitsContainerTexctColor = TextStyle(
@@ -159,6 +187,20 @@ class AppTextStyles {
     //SF Pro
     fontWeight: FontWeight.w600,
     fontSize: 11,
+    color: AppColors.whiteColor,
+    letterSpacing: 0.06,
+  );
+    static const statisticHoursText = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
+    color: AppColors.lightGreyColor,
+    letterSpacing: 0.06,
+  );
+   static const statisticHoursWhiteText = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
     color: AppColors.whiteColor,
     letterSpacing: 0.06,
   );

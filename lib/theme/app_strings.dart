@@ -8,6 +8,7 @@ class AppStrings {
   static const String statisticsScreenTitle = 'Обо мне';
   static const String sunTime = 'Утро';
   static const String eveningTime = 'Вечер';
+  static const String statisticButtonText = 'Подвести статистику';
 
   static const String cardSubscriptionManagement = 'Управление подпиской';
   static const String cardNotificationsAndSounds = 'Уведомления и звуки';

@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:otherstory_app/features/main_page/data/models/habits_item_data.dart';
+import 'package:otherstory_app/features/statistics_page/presentation/widgets/timeline_section.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import '../../../../theme/app_strings.dart';
 import '../../../../theme/image_source.dart';
@@ -55,14 +59,53 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
             ),
             const SizedBox(height: 24),
             const AddNoteSection(),
-            const TitleSection(
+            TitleSection(
               title: 'Ваши привычки',
+              settingsText: 'Править',
               icon: ImageSource.habitSettings,
+              onPressed: () {},
               child: HabitsList(
-                title: 'Проснуться в 7:00',
-                decorImage: 'assets/png/decor_image_container1.png',
+                children: [
+                  HabitItem(
+                    onPressed: () {},
+                    data: HabitsItemData(
+                        name: 'Проснуться в 7:00',
+                        imageSource: 'https://goo.su/wxyNtE'),
+                    isSelected: true,
+                  ),
+                  HabitItem(
+                    onPressed: () {},
+                    data: HabitsItemData(
+                        name: '10 минут зарядки',
+                        imageSource: 'https://goo.su/wxyNtE'),
+                    isSelected: false,
+                  ),
+                  HabitItem(
+                      onPressed: () {},
+                      data: HabitsItemData(
+                          name: '30 минут английского',
+                          imageSource: 'https://goo.su/wxyNtE'),
+                      isSelected: false),
+                  HabitItem(
+                      onPressed: () {},
+                      data: HabitsItemData(
+                          name: 'Проснуться в 7:00',
+                          imageSource: 'https://goo.su/wxyNtE'),
+                      isSelected: false),
+                ],
               ),
-            )
+            ),
+            TitleSection(
+                title: 'Занятость',
+                icon: 'assets/png/plus.png',
+                onPressed: () {},
+                child: EmploymentSection(
+                  onPressed: () {},
+                )),
+            const SizedBox(height: 15),
+            const TimelineSection(),
+            const SizedBox(height: 24),
+            const StatisticButton(),  const SizedBox(height: 15),
           ],
         ),
       ),

@@ -33,8 +33,9 @@ class AddNoteSection extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 5),
                 const Padding(
-                  padding: EdgeInsets.only(right: 55),
+                  padding: EdgeInsets.only(right: 100),
                   child: Text(
                     'Все ваши творческие мысли могут храниться в одном месте',
                     style: AppTextStyles.statisticsAddNoteSubtitle,
@@ -50,6 +51,7 @@ class AddNoteSection extends StatelessWidget {
               bottom: -16,
               child: Image.asset(
                 'assets/png/arrow_add_note.png',
+                width: 200,
                 fit: BoxFit.contain,
               ),
             ),
