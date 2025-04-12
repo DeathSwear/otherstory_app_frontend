@@ -25,14 +25,14 @@ class EmploymentSection extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                    bottom: -60,
                     right: -40,
-                    child: Image.network(
-                      'https://goo.su/8zWj4',
+                    bottom: -65,
+                    child: Image.asset(
+                      'assets/png/employment_section.png',
                       width: 270,
                     )),
                 const Padding(
-                  padding: const EdgeInsets.all(16),
+                  padding: EdgeInsets.all(16),
                   child: Positioned(
                       child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

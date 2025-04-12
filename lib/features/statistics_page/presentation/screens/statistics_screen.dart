@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/features/main_page/data/models/habits_item_data.dart';
 import 'package:otherstory_app/features/statistics_page/presentation/widgets/timeline_section.dart';
@@ -70,27 +68,27 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
                     onPressed: () {},
                     data: HabitsItemData(
                         name: 'Проснуться в 7:00',
-                        imageSource: 'https://goo.su/wxyNtE'),
+                        imageSource: 'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                     isSelected: true,
                   ),
                   HabitItem(
                     onPressed: () {},
                     data: HabitsItemData(
                         name: '10 минут зарядки',
-                        imageSource: 'https://goo.su/wxyNtE'),
+                        imageSource: 'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                     isSelected: false,
                   ),
                   HabitItem(
                       onPressed: () {},
                       data: HabitsItemData(
                           name: '30 минут английского',
-                          imageSource: 'https://goo.su/wxyNtE'),
+                          imageSource: 'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                       isSelected: false),
                   HabitItem(
                       onPressed: () {},
                       data: HabitsItemData(
                           name: 'Проснуться в 7:00',
-                          imageSource: 'https://goo.su/wxyNtE'),
+                          imageSource: 'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                       isSelected: false),
                 ],
               ),
