@@ -28,4 +28,11 @@ class AppColors {
 
   static const Color profileScreenBackground = Color.fromRGBO(245, 245, 245, 1);
   static const Color profileDividerColor = Color.fromRGBO(84, 84, 86, 0.34);
+
+  static const Color morningSection = Color.fromRGBO(154, 100, 167, 1);
+  static const Color evenintSection = Color.fromRGBO(225, 225, 237, 1);
+
+  static const Color lightGreyColor = Color.fromRGBO(235, 235, 245, 0.6);
+  static const Color addNoteContainerColor = Color.fromRGBO(67, 51, 115, 1);
+  static const Color employmentContainerColor = Color.fromRGBO(62, 71, 99, 1);
 }
