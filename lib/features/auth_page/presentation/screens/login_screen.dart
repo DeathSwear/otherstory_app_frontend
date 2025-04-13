@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/app_button.dart';
+import 'package:otherstory_app/features/auth_page/presentation/widgets/custom_pincode.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
 
@@ -107,47 +108,55 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 28,
             ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                textAlign: TextAlign.center,
-                getLabel(),
-                style: AppTextStyles.authTextFieldTitle
-                    .copyWith(color: Color.fromRGBO(60, 60, 67, 0.6)),
-              ),
-            ),
-            const SizedBox(height: 7),
-            DecoratedBox(
-              decoration: BoxDecoration(
-                  border: Border.all(
-                      color: Color.fromRGBO(60, 60, 67, 0.6), width: 1),
-                  borderRadius: BorderRadius.circular(13)),
-              child: TextField(
-                onChanged: (value) {
-                  if (textController.text.isNotEmpty && !isButtonActive) {
-                    setState(() {
-                      isButtonActive = true;
-                    });
-                  }
-                  if (textController.text.isEmpty && isButtonActive) {
-                    setState(() {
-                      isButtonActive = false;
-                    });
-                  }
-                },
-                controller: textController,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: getHint(),
-                  contentPadding: const EdgeInsets.symmetric(
-                    vertical: 14,
-                    horizontal: 16,
+            step == 2
+                ? CustomPincode(
+                    textEditingController: textController,
+                  )
+                : Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        textAlign: TextAlign.center,
+                        getLabel(),
+                        style: AppTextStyles.authTextFieldTitle
+                            .copyWith(color: Color.fromRGBO(60, 60, 67, 0.6)),
+                      ),
+                      const SizedBox(height: 7),
+                      DecoratedBox(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Color.fromRGBO(60, 60, 67, 0.6),
+                                width: 1),
+                            borderRadius: BorderRadius.circular(13)),
+                        child: TextField(
+                          onChanged: (value) {
+                            if (textController.text.isNotEmpty &&
+                                !isButtonActive) {
+                              setState(() {
+                                isButtonActive = true;
+                              });
+                            }
+                            if (textController.text.isEmpty && isButtonActive) {
+                              setState(() {
+                                isButtonActive = false;
+                              });
+                            }
+                          },
+                          controller: textController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: getHint(),
+                            contentPadding: const EdgeInsets.symmetric(
+                              vertical: 14,
+                              horizontal: 16,
+                            ),
+                            hintStyle: AppTextStyles.authTextFieldHint.copyWith(
+                                color: Color.fromRGBO(60, 60, 67, 0.6)),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  hintStyle: AppTextStyles.authTextFieldHint
-                      .copyWith(color: Color.fromRGBO(60, 60, 67, 0.6)),
-                ),
-              ),
-            ),
             const Spacer(),
             AppButton(
                 text: 'Продолжить',
@@ -159,6 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       step++;
                     }
                     textController.text = '';
+                    isButtonActive = false;
                   });
                 },
                 isEnabled: isButtonActive),

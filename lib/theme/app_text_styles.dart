@@ -300,4 +300,10 @@ class AppTextStyles {
     fontSize: 17,
     letterSpacing: -0.43,
   );
+  static const authPincode = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w700,
+    fontSize: 34,
+    letterSpacing: 0.4,
+  );
 }
