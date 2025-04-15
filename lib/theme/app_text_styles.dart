@@ -67,7 +67,7 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: -0.45,
   );
-    static const employmentSectionTitle = TextStyle(
+  static const employmentSectionTitle = TextStyle(
     //Days One
     fontWeight: FontWeight.w400,
     fontSize: 20,
@@ -81,7 +81,7 @@ class AppTextStyles {
     color: AppColors.labels1Color,
     letterSpacing: -0.23,
   );
-   static const statScreenHabitSettingsTextColor = TextStyle(
+  static const statScreenHabitSettingsTextColor = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w400,
     fontSize: 15,
@@ -95,7 +95,7 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.43,
   );
-    static const statisticResultButtonTextColor = TextStyle(
+  static const statisticResultButtonTextColor = TextStyle(
     //Days one
     fontWeight: FontWeight.w400,
     fontSize: 17,
@@ -116,21 +116,21 @@ class AppTextStyles {
     color: AppColors.labels1Color,
     letterSpacing: -0.08,
   );
-   static const employmentSectionSubtitle = TextStyle(
+  static const employmentSectionSubtitle = TextStyle(
     //SF PRO
     fontWeight: FontWeight.w400,
     fontSize: 13,
     color: AppColors.lightGreyColor,
     letterSpacing: -0.08,
   );
-   static const employmentSectionTime = TextStyle(
+  static const employmentSectionTime = TextStyle(
     //SF PRO
     fontWeight: FontWeight.w400,
     fontSize: 15,
     color: AppColors.lightGreyColor,
     letterSpacing: -0.08,
   );
-   static const habitsContainerTexctColor = TextStyle(
+  static const habitsContainerTexctColor = TextStyle(
     //SF PRO
     fontWeight: FontWeight.w600,
     fontSize: 14,
@@ -190,14 +190,14 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     letterSpacing: 0.06,
   );
-    static const statisticHoursText = TextStyle(
+  static const statisticHoursText = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w600,
     fontSize: 13,
     color: AppColors.lightGreyColor,
     letterSpacing: 0.06,
   );
-   static const statisticHoursWhiteText = TextStyle(
+  static const statisticHoursWhiteText = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w600,
     fontSize: 13,
@@ -210,6 +210,31 @@ class AppTextStyles {
     fontSize: 34,
     color: AppColors.blackColor,
     letterSpacing: 0.06,
+  );
+  static const storyContentTitle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 34,
+    color: AppColors.whiteColor,
+    height: 1,
+    letterSpacing: 0.4,
+  );
+  static const storyContentSubtitle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
+  static const storyButtonTextStyle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //SF Pro
+    fontWeight: FontWeight.w500,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
   );
 
   static const mainscreenCardsDecription = TextStyle(
