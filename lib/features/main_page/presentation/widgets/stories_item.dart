@@ -7,8 +7,7 @@ import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
 
 class StoriesItem extends StatelessWidget {
-  const StoriesItem({super.key, required this.onPressed, required this.data});
-  final VoidCallback onPressed;
+  const StoriesItem({super.key, required this.data});
   final StoriesItemData data;
 
   @override
@@ -60,7 +59,6 @@ class StoriesItem extends StatelessWidget {
             child: InkWell(
               borderRadius: BorderRadius.circular(
                   MainPageSizes.storiesImageSizeImageClipRadius),
-              onTap: onPressed,
             ),
           ),
         ],
