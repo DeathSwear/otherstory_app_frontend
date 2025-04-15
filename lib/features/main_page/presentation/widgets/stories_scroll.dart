@@ -4,9 +4,7 @@ import 'package:otherstory_app/features/main_page/data/constants/main_page_paddi
 import 'package:otherstory_app/features/main_page/data/constants/main_page_sizes.dart';
 import 'package:otherstory_app/features/main_page/data/models/stories_item_data.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/stories_item.dart';
-
 import '../../data/models/story_content_model.dart';
-import '../screens/story_content_screen.dart';
 
 class StoriesScroll extends StatelessWidget {
   final List<StoriesItemData> thumbnails;
