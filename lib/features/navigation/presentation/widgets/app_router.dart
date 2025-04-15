@@ -8,6 +8,7 @@ import 'package:otherstory_app/features/statistics_page/presentation/screens/sta
 
 import '../../../main_page/data/models/story_content_model.dart';
 import '../../../main_page/presentation/screens/story_content_screen.dart';
+import '../../../onboarding_page/view/onboarding.screen.dart';
 
 class AppRouter {
   static GoRouter router = GoRouter(
@@ -21,6 +22,11 @@ class AppRouter {
         builder: (context, state) => const RegisterScreen(),
       ),
 
+      GoRoute(
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingScreen(),
+      ),
+
       // 👇 StoryContentScreen — ВНЕ Shell-а
       GoRoute(
         path: '/story',
@@ -32,7 +38,6 @@ class AppRouter {
         },
       ),
 
-      // Навигация с bottomNav
       StatefulShellRoute(
         builder: (context, state, navigationShell) {
           return navigationShell;

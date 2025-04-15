@@ -236,6 +236,14 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.43,
   );
+  static const onboardingButtonTextStyle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //SF Pro
+    fontWeight: FontWeight.w500,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
 
   static const mainscreenCardsDecription = TextStyle(
     //SF Pro
@@ -293,5 +301,20 @@ class AppTextStyles {
     fontSize: 13,
     color: AppColors.labels1Color,
     letterSpacing: -0.08,
+  );
+
+  static const onboardingTitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w700,
+    fontSize: 28,
+    color: AppColors.blackColor,
+    letterSpacing: 0.38,
+  );
+  static const onboardingSubtitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
   );
 }

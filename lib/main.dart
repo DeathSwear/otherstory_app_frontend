@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/navigation/presentation/widgets/app_router.dart';
+import 'package:otherstory_app/features/onboarding_page/view/onboarding.screen.dart';
 
 void main() {
   runZonedGuarded(() => runApp(const MainApp()), (error, stack) {
@@ -10,15 +11,25 @@ void main() {
   });
 }
 
-final GoRouter _router = AppRouter.router;
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: _router,
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false, home: OnboardingScreen());
   }
 }
+
+// final GoRouter _router = AppRouter.router;
+
+// class MainApp extends StatelessWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp.router(
+//       routerConfig: _router,
+//     );
+//   }
+// }
