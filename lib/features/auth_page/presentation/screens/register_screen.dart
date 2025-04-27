@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/auth_page/data/helpers/auth_ui_helpers.dart';
+import 'package:otherstory_app/features/auth_page/domain/bloc/auth_bloc.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/app_button.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/custom_pincode.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
@@ -34,6 +36,74 @@ class _RegisterScreenState extends State<RegisterScreen> {
         return;
       case 2:
         print('retry code');
+    }
+  }
+
+  String savedEmail = '';
+  String savedPassword = '';
+  String savedConfPassword = '';
+
+  void mainFunction() {
+    switch (step) {
+      case 0:
+        savedEmail = textController.text;
+        setState(() {
+          step++;
+          textController.text = '';
+          textController2.text = '';
+          isButtonActive = false;
+        });
+        break;
+      case 1:
+        savedPassword = textController.text;
+        savedConfPassword = textController2.text;
+        context.read<AuthBloc>().add(AuthTryRegister(
+            email: savedEmail,
+            password: savedPassword,
+            confPass: savedConfPassword));
+        setState(() {
+          step++;
+          textController.text = '';
+          textController2.text = '';
+          isButtonActive = false;
+        });
+        break;
+      case 2:
+        context.read<AuthBloc>().add(AuthAddCode(code: textController.text));
+        break;
+      case 3:
+        context.read<AuthBloc>().add(AuthMeeting(
+            firstName: textController.text,
+            lastName: textController2.text,
+            isMan: true));
+        break;
+    }
+  }
+
+  void listenBlocStateChange(BuildContext context, AuthState state) {
+    switch (state) {
+      case AuthError _:
+        setState(() {
+          step = 0;
+          textController.text = '';
+          textController2.text = '';
+          isButtonActive = false;
+        });
+        //AppModals.showTextOk(context, state.error, AppStrings.oops);
+        break;
+      case Sucsess _:
+        if (step == 2) {
+          setState(() {
+            step++;
+            textController.text = '';
+            textController2.text = '';
+            isButtonActive = false;
+          });
+        } else {
+          context.go('/home');
+        }
+
+        break;
     }
   }
 
@@ -162,7 +232,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   });
                                 }
                               },
-                              controller: textController,
+                              controller: textController2,
                               decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: AuthUiHelpers.getRegisterHint2(step),
@@ -179,20 +249,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                     ],
                   ),
-            const Spacer(),
+            BlocListener<AuthBloc, AuthState>(
+                listener: listenBlocStateChange, child: const Spacer()),
             AppButton(
                 text: 'Продолжить',
-                onPressed: () {
-                  setState(() {
-                    if (step == 3) {
-                      context.go('/home');
-                    } else {
-                      step++;
-                    }
-                    textController.text = '';
-                    isButtonActive = false;
-                  });
-                },
+                onPressed: mainFunction,
                 isEnabled: isButtonActive),
             if (step == 0 || step == 2)
               GestureDetector(

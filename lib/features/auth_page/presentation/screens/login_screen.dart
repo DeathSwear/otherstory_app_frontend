@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/auth_page/data/helpers/auth_ui_helpers.dart';
+import 'package:otherstory_app/features/auth_page/domain/bloc/auth_bloc.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/app_button.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/custom_pincode.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
@@ -19,6 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isButtonActive = false;
 
   TextEditingController textController = TextEditingController();
+
+  String savedEmail = '';
+  String savedPassword = '';
 
   @override
   void dispose() {
@@ -41,6 +46,54 @@ class _LoginScreenState extends State<LoginScreen> {
         return;
       case 2:
         print('retry code');
+    }
+  }
+
+  void mainFunction() {
+    switch (step) {
+      case 0:
+        savedEmail = textController.text;
+        setState(() {
+          step++;
+          textController.text = '';
+          isButtonActive = false;
+        });
+        break;
+      case 1:
+        savedPassword = textController.text;
+        context.read<AuthBloc>().add(AuthTryLogin(
+              email: savedEmail,
+              password: savedPassword,
+            ));
+        break;
+      case 2:
+        context.read<AuthBloc>().add(AuthAddCode(code: textController.text));
+        break;
+    }
+  }
+
+  void listenBlocStateChange(BuildContext context, AuthState state) {
+    switch (state) {
+      case AuthError _:
+        setState(() {
+          step = 0;
+          textController.text = '';
+          isButtonActive = false;
+        });
+        //AppModals.showTextOk(context, state.error, AppStrings.oops);
+        break;
+      case Sucsess _:
+        if (step == 1) {
+          setState(() {
+            step++;
+            textController.text = '';
+            isButtonActive = false;
+          });
+        } else {
+          context.go('/home');
+        }
+
+        break;
     }
   }
 
@@ -137,20 +190,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ],
                   ),
-            const Spacer(),
+            BlocListener<AuthBloc, AuthState>(
+                listener: listenBlocStateChange, child: const Spacer()),
             AppButton(
                 text: 'Продолжить',
-                onPressed: () {
-                  setState(() {
-                    if (step == 1) {
-                      context.go('/home');
-                    } else {
-                      step++;
-                    }
-                    textController.text = '';
-                    isButtonActive = false;
-                  });
-                },
+                onPressed: mainFunction,
                 isEnabled: isButtonActive),
             GestureDetector(
               onTap: getBottomButtonFunction,
