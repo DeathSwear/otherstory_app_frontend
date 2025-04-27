@@ -317,4 +317,60 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.43,
   );
+
+  static const activeCategoriesTextStyle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.23,
+  );
+
+  static const unActiveCategoriesTextStyle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    color: AppColors.blackColor,
+    letterSpacing: -0.23,
+  );
+
+  static const productCardTitleTextStyles = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
+  );
+
+  static const productCardSubtitleTextStyles = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 11,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.06,
+  );
+
+   static const productPlayerTitleTextStyles = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w700,
+    fontSize: 18,
+    color: AppColors.blackColor,
+    letterSpacing: -0.06,
+  );
+
+  static const productPlayerSubtitleTextStyles = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
+
+  static const notFreeTextStyles = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
+  );
 }

@@ -1,5 +1,4 @@
-import 'dart:math';
-
+// import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 
@@ -7,14 +6,14 @@ class CustomImageNetwork extends StatelessWidget {
   const CustomImageNetwork(
       {super.key,
       required this.imageSource,
-      required this.width,
-      required this.height,
+      this.width,
+      this.height,
       required this.clipRadius,
       this.darken,
       this.extraDarken});
   final String imageSource;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final double clipRadius;
   final bool? darken;
   final bool? extraDarken;
@@ -74,10 +73,10 @@ class CustomImageNetwork extends StatelessWidget {
             ),
             width: width,
             height: height,
-            child: Center(
+            child: const Center(
                 child: Icon(
               Icons.error_outline,
-              size: min(height, width) / 2,
+              // size: min(height, width) / 2, // убрал высоту :)
             )),
           );
         },
