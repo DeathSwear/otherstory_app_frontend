@@ -303,6 +303,43 @@ class AppTextStyles {
     letterSpacing: -0.08,
   );
 
+  static const authTitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w700,
+    fontSize: 28,
+    letterSpacing: 0.38,
+  );
+  static const authSubtitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    letterSpacing: -0.43,
+  );
+  static const authButtonText = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    letterSpacing: -0.43,
+  );
+  static const authTextFieldTitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    letterSpacing: -0.43,
+  );
+  static const authTextFieldHint = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    letterSpacing: -0.43,
+  );
+  static const authPincode = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w700,
+    fontSize: 34,
+    letterSpacing: 0.4,
+  );
+
   static const onboardingTitle = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w700,
@@ -317,4 +354,5 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.43,
   );
+
 }
