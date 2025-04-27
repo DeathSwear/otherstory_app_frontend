@@ -5,7 +5,11 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 class CustomPincode extends StatefulWidget {
   final TextEditingController textEditingController;
-  const CustomPincode({super.key, required this.textEditingController});
+  final VoidCallback onEditingComplete;
+  const CustomPincode(
+      {super.key,
+      required this.textEditingController,
+      required this.onEditingComplete});
 
   @override
   State<CustomPincode> createState() => _CustomPincodeState();
@@ -17,6 +21,7 @@ class _CustomPincodeState extends State<CustomPincode> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 2),
       child: PinCodeTextField(
+        onEditingComplete: widget.onEditingComplete,
         appContext: context,
         length: 6,
         cursorHeight: 40,

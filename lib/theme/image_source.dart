@@ -9,4 +9,9 @@ class ImageSource {
   static const String eveningTimeSection = 'assets/png/evenint_time.png';
 
   static const String habitSettings = 'assets/png/habit_settings.png';
+
+  static const String authEnter = 'assets/png/auth_enter.png';
+  static const String authCode = 'assets/png/auth_code.png';
+  static const String authPassword = 'assets/png/auth_password.png';
+  static const String authMeeting = 'assets/png/auth_meeting.png';
 }

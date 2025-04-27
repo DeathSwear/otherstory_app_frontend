@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:otherstory_app/features/auth_page/data/helpers/auth_ui_helpers.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/app_button.dart';
 import 'package:otherstory_app/features/auth_page/presentation/widgets/custom_pincode.dart';
-import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -26,54 +26,21 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  String getTitle() {
+  void getBottomButtonFunction() {
     switch (step) {
       case 0:
-        return 'Вход';
+        context.go('/register');
+        return;
       case 1:
-        return 'Пароль';
-      default:
-        return 'Введите код';
-    }
-  }
+        setState(() {
+          step++;
+          textController.text = '';
+          isButtonActive = false;
+        });
 
-  String getSubTitle() {
-    switch (step) {
-      case 0:
-        return 'Текст при входе в акканут пользователя';
-      case 1:
-        return 'Текст при вводе пароля от акканута пользователя';
-      default:
-        return 'Текст при подтверждении почты, код приходит в письме';
-    }
-  }
-
-  String getLabel() {
-    switch (step) {
-      case 0:
-        return 'Почта';
-      default:
-        return 'Пароль';
-    }
-  }
-
-  String getHint() {
-    switch (step) {
-      case 0:
-        return 'Электронная почта';
-      default:
-        return 'Пароль';
-    }
-  }
-
-  String getBottomButtonText() {
-    switch (step) {
-      case 0:
-        return 'У меня нет аккаунта';
-      case 1:
-        return 'Я не помню пароль';
-      default:
-        return 'Отправить повторно';
+        return;
+      case 2:
+        print('retry code');
     }
   }
 
@@ -86,23 +53,24 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             const Spacer(),
-            Container(
-              color: Colors.red[100],
+            Image.asset(
+              AuthUiHelpers.getImage(step),
               height: MediaQuery.of(context).size.width * 142 / 400,
               width: MediaQuery.of(context).size.width * 142 / 400,
+              fit: BoxFit.cover,
             ),
             const SizedBox(
               height: 28,
             ),
             Text(
-              getTitle(),
+              AuthUiHelpers.getLoginTitle(step),
               style: AppTextStyles.authTitle.copyWith(color: Colors.black),
             ),
             const SizedBox(
               height: 16,
             ),
             Text(
-              getSubTitle(),
+              AuthUiHelpers.getLoginSubTitle(step),
               style: AppTextStyles.authSubtitle.copyWith(color: Colors.black),
             ),
             const SizedBox(
@@ -111,13 +79,25 @@ class _LoginScreenState extends State<LoginScreen> {
             step == 2
                 ? CustomPincode(
                     textEditingController: textController,
+                    onEditingComplete: () {
+                      if (textController.text.isNotEmpty && !isButtonActive) {
+                        setState(() {
+                          isButtonActive = true;
+                        });
+                      }
+                      if (textController.text.isEmpty && isButtonActive) {
+                        setState(() {
+                          isButtonActive = false;
+                        });
+                      }
+                    },
                   )
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         textAlign: TextAlign.center,
-                        getLabel(),
+                        AuthUiHelpers.getLoginLabel(step),
                         style: AppTextStyles.authTextFieldTitle
                             .copyWith(color: Color.fromRGBO(60, 60, 67, 0.6)),
                       ),
@@ -145,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           controller: textController,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: getHint(),
+                            hintText: AuthUiHelpers.getLoginHint(step),
                             contentPadding: const EdgeInsets.symmetric(
                               vertical: 14,
                               horizontal: 16,
@@ -162,8 +142,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 text: 'Продолжить',
                 onPressed: () {
                   setState(() {
-                    if (step == 2) {
-                      step = 0;
+                    if (step == 1) {
+                      context.go('/home');
                     } else {
                       step++;
                     }
@@ -173,12 +153,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
                 isEnabled: isButtonActive),
             GestureDetector(
-              onTap: () {},
+              onTap: getBottomButtonFunction,
               child: Container(
                 height: 52,
                 alignment: Alignment.center,
                 child: Text(
-                  getBottomButtonText(),
+                  AuthUiHelpers.getLoginBottomButtonText(step),
                   style: AppTextStyles.authButtonText.copyWith(
                     color: Colors.black,
                   ),

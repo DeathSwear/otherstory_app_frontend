@@ -30,7 +30,7 @@ class _AppButtonState extends State<AppButton> {
       onTapCancel: () => setState(() {
         isPressed = false;
       }),
-      onTap: widget.onPressed,
+      onTap: widget.isEnabled ? widget.onPressed : null,
       child: Container(
         decoration: BoxDecoration(
           color: widget.isEnabled
