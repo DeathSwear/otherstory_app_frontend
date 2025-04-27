@@ -211,6 +211,39 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: 0.06,
   );
+  static const storyContentTitle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 34,
+    color: AppColors.whiteColor,
+    height: 1,
+    letterSpacing: 0.4,
+  );
+  static const storyContentSubtitle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
+  static const storyButtonTextStyle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //SF Pro
+    fontWeight: FontWeight.w500,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
+  );
+  static const onboardingButtonTextStyle = TextStyle(
+    //чето не похоже размеры на деле и в фигме
+    //SF Pro
+    fontWeight: FontWeight.w500,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
 
   static const mainscreenCardsDecription = TextStyle(
     //SF Pro
@@ -306,4 +339,20 @@ class AppTextStyles {
     fontSize: 34,
     letterSpacing: 0.4,
   );
+
+  static const onboardingTitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w700,
+    fontSize: 28,
+    color: AppColors.blackColor,
+    letterSpacing: 0.38,
+  );
+  static const onboardingSubtitle = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w400,
+    fontSize: 17,
+    color: AppColors.blackColor,
+    letterSpacing: -0.43,
+  );
+
 }
