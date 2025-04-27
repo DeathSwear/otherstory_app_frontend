@@ -7,7 +7,7 @@ import '../widgets/onboarding_list_page.dart';
 import 'onboarding_model.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({Key? key}) : super(key: key);
+  const OnboardingScreen({super.key});
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -45,7 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       _pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     } else {
-      context.go('/home');
+      context.go('/login');
     }
   }
 
@@ -73,15 +73,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: ElevatedButton(
               onPressed: _nextPage,
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(13)),
+                  backgroundColor: AppColors.blackColor,
+                  minimumSize: const Size(double.infinity, 52)),
               child: Text(
                 _currentPage == _steps.length - 1 ? 'Продолжить' : 'Далее',
                 style: AppTextStyles.onboardingButtonTextStyle,
               ),
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(13)),
-                  backgroundColor: AppColors.blackColor,
-                  minimumSize: const Size(double.infinity, 52)),
             ),
           ),
           const SizedBox(height: 14),
@@ -135,7 +135,7 @@ class TherdStepContent extends StatelessWidget {
       padding: const EdgeInsets.only(top: 40),
       child: Image.asset(
         'assets/png/onboarding_three_step.png',
-       width: double.infinity,
+        width: double.infinity,
         fit: BoxFit.cover,
       ),
     );

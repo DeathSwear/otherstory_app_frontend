@@ -32,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   void getBottomButtonFunction() {
     switch (step) {
       case 0:
-        context.go('/');
+        context.go('/login');
         return;
       case 2:
         print('retry code');
