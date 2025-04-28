@@ -31,8 +31,14 @@ class AppColors {
 
   static const Color morningSection = Color.fromRGBO(154, 100, 167, 1);
   static const Color evenintSection = Color.fromRGBO(225, 225, 237, 1);
+  static const Color pinkColor = Color.fromRGBO(233, 136, 240, 1);
 
   static const Color lightGreyColor = Color.fromRGBO(235, 235, 245, 0.6);
   static const Color addNoteContainerColor = Color.fromRGBO(67, 51, 115, 1);
   static const Color employmentContainerColor = Color.fromRGBO(62, 71, 99, 1);
+
+  static const Color greyContainerCardColor = Color.fromRGBO(242, 242, 247, 1);
+
+  static const Color unactivePlayerColor =   Color.fromRGBO(235, 235, 235, 1);
+
 }
