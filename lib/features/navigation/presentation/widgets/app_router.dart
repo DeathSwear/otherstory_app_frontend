@@ -45,12 +45,14 @@ class AppRouter {
         path: '/meditations',
         builder: (context, state) => const MeditationsScreen(),
       ),
-      
+
       GoRoute(
         path: '/meditations_player',
         builder: (context, state) {
           final product = state.extra as MeditationsProductModel;
-          return MeditationPlayerScreen(product: product);
+          return MeditationPlayerScreen(
+            initialProduct: product,
+          );
         },
       ),
 

@@ -38,4 +38,7 @@ class AppColors {
   static const Color employmentContainerColor = Color.fromRGBO(62, 71, 99, 1);
 
   static const Color greyContainerCardColor = Color.fromRGBO(242, 242, 247, 1);
+
+  static const Color unactivePlayerColor =   Color.fromRGBO(235, 235, 235, 1);
+
 }

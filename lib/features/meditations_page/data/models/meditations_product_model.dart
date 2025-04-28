@@ -5,6 +5,7 @@ class MeditationsProductModel {
   final String subtitle;
   final String imageSource;
   final bool isFree;
+  final Duration duration;
 
   MeditationsProductModel(
       {required this.id,
@@ -12,5 +13,6 @@ class MeditationsProductModel {
       required this.title,
       required this.subtitle,
       required this.imageSource,
-      required this.isFree});
+      required this.isFree,
+      required this.duration});
 }

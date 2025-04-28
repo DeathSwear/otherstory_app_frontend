@@ -350,10 +350,10 @@ class AppTextStyles {
     letterSpacing: -0.06,
   );
 
-   static const productPlayerTitleTextStyles = TextStyle(
+  static const productPlayerTitleTextStyles = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w700,
-    fontSize: 18,
+    fontSize: 20,
     color: AppColors.blackColor,
     letterSpacing: -0.06,
   );
@@ -372,5 +372,13 @@ class AppTextStyles {
     fontSize: 17,
     color: AppColors.blackColor,
     letterSpacing: -0.43,
+  );
+
+  static const productPlayerDurationTextStyles = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w600,
+    fontSize: 13,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.08,
   );
 }

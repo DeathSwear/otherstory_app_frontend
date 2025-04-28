@@ -8,9 +8,9 @@ final class ProductsListInitial extends ProductsListState {}
 class ProductsListLoading extends ProductsListState {}
 
 class ProductsListLoaded extends ProductsListState {
-  final List<MeditationsProductModel> producstList;
+  final List<MeditationsProductModel> productsList;
 
-  ProductsListLoaded({required this.producstList});
+  ProductsListLoaded({required this.productsList});
 }
 
 class ProductsListFailure extends ProductsListState {

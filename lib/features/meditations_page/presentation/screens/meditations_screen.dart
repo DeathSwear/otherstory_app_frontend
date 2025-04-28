@@ -46,15 +46,37 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
                     return ListView.builder(
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: state.producstList.length,
+                      itemCount: state.productsList.length,
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 5),
                           child: GestureDetector(
                             onTap: () {
-                              context.push('/meditations_player',
-                                  extra: state.producstList[index]);
+                              final selectedProduct = state.productsList[index];
+
+                              if (selectedProduct.isFree) {
+                                context.push(
+                                  '/meditations_player',
+                                  extra: selectedProduct,
+                                );
+                              } else {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => AlertDialog(
+                                    title: const Text('Медитация недоступна'),
+                                    content: const Text(
+                                        'Эта медитация доступна только по подписке.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.of(context).pop(),
+                                        child: const Text('Ок'),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }
                             },
                             child: IntrinsicHeight(
                               child: Row(
@@ -63,7 +85,7 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
                                 children: [
                                   Expanded(
                                     child: ProductCard(
-                                      products: state.producstList[index],
+                                      products: state.productsList[index],
                                     ),
                                   ),
                                 ],
