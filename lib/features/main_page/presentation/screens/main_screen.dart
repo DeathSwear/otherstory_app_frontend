@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/main_page/data/constants/main_page_paddings.dart';
 import 'package:otherstory_app/features/main_page/data/constants/main_page_sizes.dart';
 import 'package:otherstory_app/features/main_page/data/models/audio_item_data.dart';
@@ -159,7 +160,9 @@ class _MainScreenState extends State<MainScreen> {
                 height: MainPageSizes.categoryMeditationScrollHeight,
                 children: [
                   MeditationsItem(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.push('/meditations');
+                      },
                       data: MeditationsItemData(
                           name:
                               'Денежная медитация от стесса и беспокойного мозга',
