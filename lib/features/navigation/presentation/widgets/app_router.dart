@@ -18,19 +18,16 @@ class AppRouter {
     routes: [
       GoRoute(
         path: '/',
+        builder: (context, state) => const OnboardingScreen(),
+      ),
+      GoRoute(
+        path: '/login',
         builder: (context, state) => const LoginScreen(),
       ),
       GoRoute(
         path: '/register',
         builder: (context, state) => const RegisterScreen(),
       ),
-
-      GoRoute(
-        path: '/onboarding',
-        builder: (context, state) => const OnboardingScreen(),
-      ),
-
-      // 👇 StoryContentScreen — ВНЕ Shell-а
       GoRoute(
         path: '/story',
         builder: (context, state) {
@@ -40,7 +37,6 @@ class AppRouter {
           return StoryContentScreen(stories: stories, initialIndex: index);
         },
       ),
-
       GoRoute(
         path: '/meditations',
         builder: (context, state) => const MeditationsScreen(),
@@ -55,7 +51,6 @@ class AppRouter {
           );
         },
       ),
-
       StatefulShellRoute(
         builder: (context, state, navigationShell) {
           return navigationShell;
