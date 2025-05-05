@@ -5,7 +5,13 @@ import 'package:otherstory_app/features/main_page/presentation/screens/main_scre
 import 'package:otherstory_app/features/meditations_page/data/models/meditations_product_model.dart';
 import 'package:otherstory_app/features/meditations_page/presentation/screens/meditations_player_screen.dart';
 import 'package:otherstory_app/features/meditations_page/presentation/screens/meditations_screen.dart';
+import 'package:otherstory_app/features/music_page/data/models/music_product_model.dart';
+import 'package:otherstory_app/features/music_page/screens/music_player_screen.dart';
+import 'package:otherstory_app/features/music_page/screens/music_screen.dart';
 import 'package:otherstory_app/features/navigation/presentation/screens/scaffold_with_nav_bar.dart';
+import 'package:otherstory_app/features/podcasts_page/data/models/podcasts_product_model.dart';
+import 'package:otherstory_app/features/podcasts_page/screens/podcasts_player_screen.dart';
+import 'package:otherstory_app/features/podcasts_page/screens/podcasts_screen.dart';
 import 'package:otherstory_app/features/profile_page/presentation/screens/profile_screen.dart';
 import 'package:otherstory_app/features/statistics_page/presentation/screens/statistics_screen.dart';
 
@@ -43,6 +49,16 @@ class AppRouter {
       ),
 
       GoRoute(
+        path: '/podcasts',
+        builder: (context, state) => const PodcastsScreen(),
+      ),
+
+      GoRoute(
+        path: '/music',
+        builder: (context, state) => const MusicScreen(),
+      ),
+
+      GoRoute(
         path: '/meditations_player',
         builder: (context, state) {
           final product = state.extra as MeditationsProductModel;
@@ -51,6 +67,27 @@ class AppRouter {
           );
         },
       ),
+      
+      GoRoute(
+        path: '/podcasts_player',
+        builder: (context, state) {
+          final product = state.extra as PodcastsProductModel;
+          return PodcastsPlayerScreen(
+            initialProduct: product,
+          );
+        },
+      ),
+
+      GoRoute(
+        path: '/music_player',
+        builder: (context, state) {
+          final product = state.extra as MusicProductModel;
+          return MusicPlayerScreen(
+            initialProduct: product,
+          );
+        },
+      ),
+
       StatefulShellRoute(
         builder: (context, state, navigationShell) {
           return navigationShell;

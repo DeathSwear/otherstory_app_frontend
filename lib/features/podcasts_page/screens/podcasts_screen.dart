@@ -3,18 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/global/widgets/product_app_bar.dart';
 import 'package:otherstory_app/features/global/widgets/product_card.dart';
-import 'package:otherstory_app/features/meditations_page/bloc/categories_list/categories_list_bloc.dart';
-import 'package:otherstory_app/features/meditations_page/bloc/products_list/bloc/products_list_bloc.dart';
-import 'package:otherstory_app/features/meditations_page/presentation/widgets/product_categories_list.dart';
+import 'package:otherstory_app/features/podcasts_page/bloc/podcasts_categories_list/categories_list_bloc.dart';
+import 'package:otherstory_app/features/podcasts_page/bloc/podcasts_products_list/products_list_bloc.dart';
+import 'package:otherstory_app/features/podcasts_page/widgets/product_categories_list%20copy.dart';
 
-class MeditationsScreen extends StatefulWidget {
-  const MeditationsScreen({super.key});
+class PodcastsScreen extends StatefulWidget {
+  const PodcastsScreen({super.key});
 
   @override
-  State<MeditationsScreen> createState() => _MeditationsScreenState();
+  State<PodcastsScreen> createState() => _PodcastsScreenState();
 }
 
-class _MeditationsScreenState extends State<MeditationsScreen> {
+class _PodcastsScreenState extends State<PodcastsScreen> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -30,7 +30,8 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
           automaticallyImplyLeading: false,
           elevation: 0,
           title: const ProductAppBar(
-            icon: Icons.error_outline, title: 'Медитации',
+            icon: Icons.error_outline,
+            title: 'Аудио подкасты',
           ),
         ),
         body: SingleChildScrollView(
@@ -57,16 +58,16 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
 
                               if (selectedProduct.isFree) {
                                 context.push(
-                                  '/meditations_player',
+                                  '/podcasts_player',
                                   extra: selectedProduct,
                                 );
                               } else {
                                 showDialog(
                                   context: context,
                                   builder: (context) => AlertDialog(
-                                    title: const Text('Медитация недоступна'),
+                                    title: const Text('Подкаст недоступен'),
                                     content: const Text(
-                                        'Эта медитация доступна только по подписке.'),
+                                        'Этот подкаст доступен только по подписке.'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
@@ -85,7 +86,7 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
                                 children: [
                                   Expanded(
                                     child: ProductCard(
-                                       data: state.productsList[index],
+                                      data: state.productsList[index],
                                     ),
                                   ),
                                 ],

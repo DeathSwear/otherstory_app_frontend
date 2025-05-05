@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/features/global/widgets/custom_image_network.dart';
-import 'package:otherstory_app/features/meditations_page/data/models/meditations_product_model.dart';
+import 'package:otherstory_app/features/main_page/data/models/abstract_product_card_data.dart';
 
-class MeditationImageSlider extends StatelessWidget {
-  final List<MeditationsProductModel> freeProducts;
+class ProductImageSlider extends StatelessWidget {
+  final List<ProductCardData> freeData;
   final int currentIndex;
   final PageController pageController;
   final ValueChanged<int> onPageChanged;
 
-  const MeditationImageSlider({
+  const ProductImageSlider({
     super.key,
-    required this.freeProducts,
+    required this.freeData,
     required this.currentIndex,
     required this.pageController,
     required this.onPageChanged,
@@ -24,7 +24,7 @@ class MeditationImageSlider extends StatelessWidget {
       alignment: Alignment.center,
       child: PageView.builder(
         controller: pageController,
-        itemCount: freeProducts.length,
+        itemCount: freeData.length,
         itemBuilder: (context, index) {
           final isCurrent = index == currentIndex;
           return AnimatedScale(
@@ -38,7 +38,7 @@ class MeditationImageSlider extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(13),
                 child: CustomImageNetwork(
-                  imageSource: freeProducts[index].imageSource,
+                  imageSource: freeData[index].imageSource,
                   clipRadius: 13,
                 ),
               ),

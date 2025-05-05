@@ -24,7 +24,7 @@ class MeditationsItem extends StatelessWidget {
             clipRadius: MainPageSizes.categoryMeditationImageClipRadius,
           ),
           DecoratedBox(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,

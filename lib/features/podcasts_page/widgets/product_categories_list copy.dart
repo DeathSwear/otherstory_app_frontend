@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:otherstory_app/features/meditations_page/bloc/categories_list/categories_list_bloc.dart';
+import 'package:otherstory_app/features/podcasts_page/bloc/podcasts_categories_list/categories_list_bloc.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
 
-class CategoriesList extends StatelessWidget {
-  const CategoriesList({
+class ProductCategoriesList extends StatelessWidget {
+  const ProductCategoriesList({
     super.key,
   });
 

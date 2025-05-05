@@ -1,17 +1,17 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/features/global/widgets/custom_image_network.dart';
-import 'package:otherstory_app/features/meditations_page/data/models/meditations_product_model.dart';
+import 'package:otherstory_app/features/main_page/data/models/abstract_product_card_data.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
-    required this.products,
+    required this.data,
   });
 
-  final MeditationsProductModel products;
+  final ProductCardData data;
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,13 @@ class ProductCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(products.time,
+                      Text(data.time,
                           style: AppTextStyles.productCardSubtitleTextStyles),
                       const SizedBox(height: 4),
-                      Text(products.title,
+                      Text(data.title,
                           style: AppTextStyles.productCardTitleTextStyles),
                       const SizedBox(height: 4),
-                      Text(products.subtitle,
+                      Text(data.subtitle,
                           style: AppTextStyles.productCardSubtitleTextStyles),
                     ],
                   ),
@@ -54,7 +54,7 @@ class ProductCard extends StatelessWidget {
                   color: AppColors.greyContainerCardColor,
                 ),
                 child: CustomImageNetwork(
-                  imageSource: products.imageSource,
+                  imageSource: data.imageSource,
                   width: 60,
                   clipRadius: 13,
                 ),
@@ -62,7 +62,7 @@ class ProductCard extends StatelessWidget {
             ],
           ),
         ),
-        if (!products.isFree)
+        if (!data.isFree)
           Positioned.fill(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(13),
@@ -74,7 +74,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
           ),
-        if (!products.isFree)
+        if (!data.isFree)
           const Positioned.fill(
             child: Center(
               child: Row(

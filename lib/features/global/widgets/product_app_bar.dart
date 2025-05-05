@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MeditationAppBar extends StatelessWidget {
-  const MeditationAppBar({
+class ProductAppBar extends StatelessWidget {
+  const ProductAppBar({
     super.key,
     this.icon,
+    required this.title,
   });
 
+  final String title;
   final IconData? icon;
 
   @override
@@ -22,7 +24,7 @@ class MeditationAppBar extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 icon: const Icon(Icons.arrow_back_ios, size: 20)),
-            const Text('Медитации'),
+            Text(title),
             IconButton(
                 padding: EdgeInsets.zero,
                 constraints: const BoxConstraints(),

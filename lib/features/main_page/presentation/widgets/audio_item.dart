@@ -14,36 +14,39 @@ class AudioItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MainPageSizes.categoryAudioImageSize,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            children: [
-              CustomImageNetwork(
-                height: MainPageSizes.categoryAudioImageSize,
-                width: MainPageSizes.categoryAudioImageSize,
-                imageSource: data.imageSource,
-                clipRadius: MainPageSizes.categoryCoursesImageClipRadius,
-                darken: true,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(
-                    MainPagePaddings.categoryCoursesImageNameAll),
-                child: Text(
-                  data.name,
-                  style: AppTextStyles.categoryItemNameForeground,
+      child: GestureDetector(
+        onTap: onPressed,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                CustomImageNetwork(
+                  height: MainPageSizes.categoryAudioImageSize,
+                  width: MainPageSizes.categoryAudioImageSize,
+                  imageSource: data.imageSource,
+                  clipRadius: MainPageSizes.categoryCoursesImageClipRadius,
+                  darken: true,
                 ),
-              )
-            ],
-          ),
-          const SizedBox(
-            height: MainPagePaddings.categoryItemImageBottom,
-          ),
-          Text(
-            data.decsription,
-            style: AppTextStyles.categoryItemDescription1,
-          )
-        ],
+                Padding(
+                  padding: const EdgeInsets.all(
+                      MainPagePaddings.categoryCoursesImageNameAll),
+                  child: Text(
+                    data.name,
+                    style: AppTextStyles.categoryItemNameForeground,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: MainPagePaddings.categoryItemImageBottom,
+            ),
+            Text(
+              data.decsription,
+              style: AppTextStyles.categoryItemDescription1,
+            )
+          ],
+        ),
       ),
     );
   }

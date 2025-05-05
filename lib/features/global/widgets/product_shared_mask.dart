@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/features/main_page/data/models/abstract_product_card_data.dart';
 
-class CustomSharedMask extends StatelessWidget {
-  const CustomSharedMask({
+class ProductSharedMask extends StatelessWidget {
+  const ProductSharedMask({
     super.key,
     required this.freeData,
     required this.currentIndex,

@@ -3,18 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/global/widgets/product_app_bar.dart';
 import 'package:otherstory_app/features/global/widgets/product_card.dart';
-import 'package:otherstory_app/features/meditations_page/bloc/categories_list/categories_list_bloc.dart';
-import 'package:otherstory_app/features/meditations_page/bloc/products_list/bloc/products_list_bloc.dart';
-import 'package:otherstory_app/features/meditations_page/presentation/widgets/product_categories_list.dart';
+import 'package:otherstory_app/features/music_page/bloc/music_categories_list/categories_list_bloc.dart';
+import 'package:otherstory_app/features/music_page/bloc/music_products_list/products_list_bloc.dart';
+import 'package:otherstory_app/features/music_page/widgets/product_categories_list.dart';
 
-class MeditationsScreen extends StatefulWidget {
-  const MeditationsScreen({super.key});
+class MusicScreen extends StatefulWidget {
+  const MusicScreen({super.key});
 
   @override
-  State<MeditationsScreen> createState() => _MeditationsScreenState();
+  State<MusicScreen> createState() => _MusicScreenState();
 }
 
-class _MeditationsScreenState extends State<MeditationsScreen> {
+class _MusicScreenState extends State<MusicScreen> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -30,7 +30,8 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
           automaticallyImplyLeading: false,
           elevation: 0,
           title: const ProductAppBar(
-            icon: Icons.error_outline, title: 'Медитации',
+            icon: Icons.error_outline,
+            title: 'Авторская музыка',
           ),
         ),
         body: SingleChildScrollView(
@@ -57,7 +58,7 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
 
                               if (selectedProduct.isFree) {
                                 context.push(
-                                  '/meditations_player',
+                                  '/music_player',
                                   extra: selectedProduct,
                                 );
                               } else {
@@ -85,7 +86,7 @@ class _MeditationsScreenState extends State<MeditationsScreen> {
                                 children: [
                                   Expanded(
                                     child: ProductCard(
-                                       data: state.productsList[index],
+                                      data: state.productsList[index],
                                     ),
                                   ),
                                 ],
