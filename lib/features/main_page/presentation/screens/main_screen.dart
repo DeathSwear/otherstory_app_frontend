@@ -12,7 +12,7 @@ import 'package:otherstory_app/features/main_page/presentation/widgets/category.
 import 'package:otherstory_app/features/main_page/presentation/widgets/courses_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/day_card_section.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/main_screen_header.dart';
-import 'package:otherstory_app/features/main_page/presentation/widgets/meditation_item.dart';
+import 'package:otherstory_app/features/main_page/presentation/widgets/meditations_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/music_item.dart';
 import 'package:otherstory_app/features/main_page/presentation/widgets/stories_scroll.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
@@ -104,6 +104,7 @@ class _MainScreenState extends State<MainScreen> {
             Category(
               title: 'Курсы',
               height: MainPageSizes.categoryCoursesScrollHeight,
+              onPressed: () {},
               children: [
                 CoursesItem(
                   onPressed: () {},
@@ -158,6 +159,9 @@ class _MainScreenState extends State<MainScreen> {
             Category(
                 title: 'Медитация',
                 height: MainPageSizes.categoryMeditationScrollHeight,
+                onPressed: () {
+                  context.push('/meditations');
+                },
                 children: [
                   MeditationsItem(
                       onPressed: () {
@@ -228,9 +232,14 @@ class _MainScreenState extends State<MainScreen> {
             Category(
               title: 'Аудио подкасты',
               height: MainPageSizes.categoryAudioScrollHeight,
+              onPressed: () {
+                context.push('/podcasts');
+              },
               children: [
                 AudioItem(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push('/podcasts');
+                  },
                   data: AudioItemData(
                       name: 'Детская позиция',
                       decsription: 'Буквально пара строк описания',
@@ -238,7 +247,9 @@ class _MainScreenState extends State<MainScreen> {
                           'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                 ),
                 AudioItem(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push('/podcasts');
+                  },
                   data: AudioItemData(
                       name: 'Детская позиция',
                       decsription: 'Буквально пара строк описания',
@@ -267,11 +278,16 @@ class _MainScreenState extends State<MainScreen> {
               height: MainPagePaddings.basicVerticalSpacer,
             ),
             Category(
-                title: 'Аудио подкасты',
+                title: 'Авторская музыка',
                 height: MainPageSizes.categoryMusicScrollHeight,
+                onPressed: () {
+                  context.push('/music');
+                },
                 children: [
                   MusicItem(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/music');
+                    },
                     data: MusicItemData(
                         name: 'Глухой лес',
                         decsription: '15 минут',
@@ -279,7 +295,9 @@ class _MainScreenState extends State<MainScreen> {
                             'https://a.d-cd.net/XmtPdFb25hEB7iT9G2Qul-LzHz8-1920.jpg'),
                   ),
                   MusicItem(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push('/music');
+                    },
                     data: MusicItemData(
                         name: 'Звонкие склоны',
                         decsription: '21 минут',

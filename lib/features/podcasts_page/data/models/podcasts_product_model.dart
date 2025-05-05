@@ -1,6 +1,6 @@
 import 'package:otherstory_app/features/main_page/data/models/abstract_product_card_data.dart';
 
-class MeditationsProductModel implements ProductCardData {
+class PodcastsProductModel implements ProductCardData {
   @override
   final int id;
   @override
@@ -16,7 +16,7 @@ class MeditationsProductModel implements ProductCardData {
   @override
   final Duration duration;
 
-  MeditationsProductModel({
+  PodcastsProductModel({
     required this.id,
     required this.time,
     required this.title,

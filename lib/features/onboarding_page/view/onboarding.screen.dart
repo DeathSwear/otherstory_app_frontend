@@ -79,7 +79,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(13)),
+                      borderRadius: BorderRadius.circular(13)),
                   backgroundColor: AppColors.blackColor,
                   minimumSize: const Size(double.infinity, 52)),
             ),
@@ -135,7 +135,7 @@ class TherdStepContent extends StatelessWidget {
       padding: const EdgeInsets.only(top: 40),
       child: Image.asset(
         'assets/png/onboarding_three_step.png',
-       width: double.infinity,
+        width: double.infinity,
         fit: BoxFit.cover,
       ),
     );

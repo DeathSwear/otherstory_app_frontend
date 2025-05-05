@@ -7,12 +7,14 @@ class Category extends StatelessWidget {
   final String title;
   final List<Widget> children;
   final double height;
+  final VoidCallback onPressed;
 
   const Category({
     super.key,
     required this.title,
     required this.children,
     required this.height,
+    required this.onPressed,
   });
 
   @override
@@ -29,7 +31,7 @@ class Category extends StatelessWidget {
             children: [
               Text(title, style: AppTextStyles.categoryTitleWhiteTheme),
               CategoryButton(
-                onPressed: () {},
+                onPressed: onPressed,
               ),
             ],
           ),

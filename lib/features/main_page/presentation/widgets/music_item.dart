@@ -14,30 +14,33 @@ class MusicItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MainPageSizes.categoryMusicImageSize,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomImageNetwork(
-            height: MainPageSizes.categoryMusicImageSize,
-            width: MainPageSizes.categoryMusicImageSize,
-            imageSource: data.imageSource,
-            clipRadius: 100,
-          ),
-          const SizedBox(
-            height: MainPagePaddings.categoryItemImageBottom,
-          ),
-          Text(
-            data.name,
-            style: AppTextStyles.categoryItemNameWhiteTheme,
-          ),
-          const SizedBox(
-            height: MainPagePaddings.categoryItemSpacer,
-          ),
-          Text(
-            data.decsription,
-            style: AppTextStyles.categoryItemDescription1,
-          ),
-        ],
+      child: GestureDetector(
+        onTap: onPressed,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomImageNetwork(
+              height: MainPageSizes.categoryMusicImageSize,
+              width: MainPageSizes.categoryMusicImageSize,
+              imageSource: data.imageSource,
+              clipRadius: 100,
+            ),
+            const SizedBox(
+              height: MainPagePaddings.categoryItemImageBottom,
+            ),
+            Text(
+              data.name,
+              style: AppTextStyles.categoryItemNameWhiteTheme,
+            ),
+            const SizedBox(
+              height: MainPagePaddings.categoryItemSpacer,
+            ),
+            Text(
+              data.decsription,
+              style: AppTextStyles.categoryItemDescription1,
+            ),
+          ],
+        ),
       ),
     );
   }

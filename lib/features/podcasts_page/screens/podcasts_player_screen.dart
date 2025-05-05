@@ -3,24 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:otherstory_app/features/global/widgets/product_app_bar.dart';
 import 'package:otherstory_app/features/global/widgets/product_image_slider.dart';
-import 'package:otherstory_app/features/meditations_page/bloc/products_list/bloc/products_list_bloc.dart';
-import 'package:otherstory_app/features/meditations_page/data/models/meditations_product_model.dart';
-import 'package:otherstory_app/features/meditations_page/presentation/widgets/custom_shared_mask.dart' show CustomSharedMask;
+import 'package:otherstory_app/features/meditations_page/presentation/widgets/custom_shared_mask.dart';
 import 'package:otherstory_app/features/meditations_page/presentation/widgets/custom_slider.dart';
 import 'package:otherstory_app/features/meditations_page/presentation/widgets/formatter_utils.dart';
 import 'package:otherstory_app/features/meditations_page/presentation/widgets/player_controls.dart';
+import 'package:otherstory_app/features/podcasts_page/bloc/podcasts_products_list/products_list_bloc.dart';
+import 'package:otherstory_app/features/podcasts_page/data/models/podcasts_product_model.dart';
 import 'package:otherstory_app/theme/app_text_styles.dart';
 
-class MeditationPlayerScreen extends StatefulWidget {
-  final MeditationsProductModel initialProduct;
+class PodcastsPlayerScreen extends StatefulWidget {
+  final PodcastsProductModel initialProduct;
 
-  const MeditationPlayerScreen({super.key, required this.initialProduct});
+  const PodcastsPlayerScreen({super.key, required this.initialProduct});
 
   @override
-  State<MeditationPlayerScreen> createState() => _MeditationPlayerScreenState();
+  State<PodcastsPlayerScreen> createState() => _PodcastsPlayerScreenState();
 }
 
-class _MeditationPlayerScreenState extends State<MeditationPlayerScreen> {
+class _PodcastsPlayerScreenState extends State<PodcastsPlayerScreen> {
   int currentIndex = 0;
   late PageController _pageController;
   double currentProgress = 0.0;
@@ -106,7 +106,9 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
-          title: const ProductAppBar(title: 'Медитации',),
+          title: const ProductAppBar(
+            title: 'Аудио подкасты',
+          ),
         ),
         body: BlocListener<ProductsListBloc, ProductsListState>(
           listener: (context, state) {
@@ -205,7 +207,9 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen> {
                               });
                             },
                           ),
-                          const SizedBox(height: 5,),
+                          const SizedBox(
+                            height: 5,
+                          ),
                           //время начало-конец в Slider
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
