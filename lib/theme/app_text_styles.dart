@@ -88,7 +88,7 @@ class AppTextStyles {
     color: AppColors.blackColor,
     letterSpacing: -0.23,
   );
-  static const profileCardTitleWhiteTheme = TextStyle(
+  static const profileCardTitle = TextStyle(
     //SF PRO
     fontWeight: FontWeight.w400,
     fontSize: 17,
@@ -355,7 +355,6 @@ class AppTextStyles {
     letterSpacing: -0.43,
   );
 
-
   static const activeCategoriesTextStyle = TextStyle(
     //SF Pro
     fontWeight: FontWeight.w400,
@@ -418,5 +417,36 @@ class AppTextStyles {
     fontSize: 13,
     color: AppColors.labels1Color,
     letterSpacing: -0.08,
+  );
+
+  static const cardDayTitle = TextStyle(
+    //Days One
+    fontWeight: FontWeight.w400,
+    fontSize: 28,
+    color: AppColors.blackColor,
+    letterSpacing: 0.38,
+  );
+
+  static const cardDaySubtitle = TextStyle(
+    //SF PRO
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.labels1Color,
+    letterSpacing: -0.08,
+  );
+
+   static const cardDayButtonText = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w600,
+    fontSize: 17,
+    color: AppColors.whiteColor,
+    letterSpacing: -0.43,
+  );
+
+   static const newCardDay = TextStyle(
+    //SF Pro
+    fontWeight: FontWeight.w500,
+    fontSize: 12,
+    color: AppColors.whiteColor,
   );
 }

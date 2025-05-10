@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:otherstory_app/features/meditations_page/presentation/screens/meditations_screen.dart';
 import 'package:otherstory_app/features/auth_page/domain/bloc/auth_bloc.dart';
 import 'package:otherstory_app/features/navigation/presentation/widgets/app_router.dart';
+import 'package:otherstory_app/theme/theme.dart';
 
 void main() {
   runZonedGuarded(() => runApp(const MainApp()), (error, stack) {
@@ -25,9 +25,9 @@ class MainApp extends StatelessWidget {
         BlocProvider<AuthBloc>(create: (context) => AuthBloc()),
       ],
       child: MaterialApp.router(
+        theme: theme,
         routerConfig: _router,
       ),
     );
   }
 }
-

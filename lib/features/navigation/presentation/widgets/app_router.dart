@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/auth_page/presentation/screens/login_screen.dart';
 import 'package:otherstory_app/features/auth_page/presentation/screens/register_screen.dart';
+import 'package:otherstory_app/features/card_day_page/presentation/screens/opened_card_screen.dart';
+import 'package:otherstory_app/features/card_day_page/presentation/screens/card_day_screen.dart';
 import 'package:otherstory_app/features/main_page/presentation/screens/main_screen.dart';
 import 'package:otherstory_app/features/meditations_page/data/models/meditations_product_model.dart';
 import 'package:otherstory_app/features/meditations_page/presentation/screens/meditations_player_screen.dart';
@@ -47,17 +49,25 @@ class AppRouter {
         path: '/meditations',
         builder: (context, state) => const MeditationsScreen(),
       ),
-
       GoRoute(
         path: '/podcasts',
         builder: (context, state) => const PodcastsScreen(),
       ),
-
       GoRoute(
         path: '/music',
         builder: (context, state) => const MusicScreen(),
       ),
-
+      GoRoute(
+        path: '/card_day',
+        builder: (context, state) => const CardDayScreen(),
+      ),
+      GoRoute(
+        path: '/opened_card_day',
+        builder: (context, state) {
+          final card = state.extra as Map<String, String>;
+          return OpenedCardScreen(card: card);
+        },
+      ),
       GoRoute(
         path: '/meditations_player',
         builder: (context, state) {
@@ -67,7 +77,6 @@ class AppRouter {
           );
         },
       ),
-      
       GoRoute(
         path: '/podcasts_player',
         builder: (context, state) {
@@ -77,7 +86,6 @@ class AppRouter {
           );
         },
       ),
-
       GoRoute(
         path: '/music_player',
         builder: (context, state) {
@@ -87,7 +95,6 @@ class AppRouter {
           );
         },
       ),
-
       StatefulShellRoute(
         builder: (context, state, navigationShell) {
           return navigationShell;

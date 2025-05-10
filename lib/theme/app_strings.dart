@@ -17,4 +17,9 @@ class AppStrings {
   static const String cardLanguage = 'Язык';
   static const String cardFAQ = 'Other FAQ';
   static const String appVersion = 'Other App 1.0.0 (52352.1)';
+
+  static const String yourCardDay = 'Ваша карта дня';
+  static const String selectCardDay = '  Выбрать карту';
+  static const String cardDaySubtitle =
+      'Получайте пожелание от известной личности\nкаждый день и собирайте свою коллекцию';
 }

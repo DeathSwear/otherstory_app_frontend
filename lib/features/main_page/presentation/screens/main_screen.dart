@@ -97,7 +97,11 @@ class _MainScreenState extends State<MainScreen> {
             const SizedBox(
               height: 16,
             ),
-            const DayCardSection(),
+            DayCardSection(
+              onPressed: () {
+                context.push('/card_day');
+              },
+            ),
             const SizedBox(
               height: MainPagePaddings.basicVerticalSpacer,
             ),
