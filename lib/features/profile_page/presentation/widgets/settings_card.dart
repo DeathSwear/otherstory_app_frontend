@@ -34,7 +34,7 @@ class SettingsCard extends StatelessWidget {
                   const SizedBox(width: ProfilePageSizes.profileIconRight),
                   Text(
                     title,
-                    style: AppTextStyles.profileCardTitleWhiteTheme,
+                    style: AppTextStyles.profileCardTitle,
                   ),
                 ],
               ),
