@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:otherstory_app/features/auth_page/domain/bloc/auth_bloc.dart';
 import 'package:otherstory_app/features/navigation/presentation/widgets/app_router.dart';
+import 'package:otherstory_app/features/profile_page/presentation/screens/profile_screen.dart';
 import 'package:otherstory_app/theme/theme.dart';
 
 void main() {
@@ -20,14 +21,25 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<AuthBloc>(create: (context) => AuthBloc()),
-      ],
-      child: MaterialApp.router(
-        theme: theme,
-        routerConfig: _router,
-      ),
+    return MaterialApp(
+      home: ProfileScreen(),
     );
   }
 }
+
+// class MainApp extends StatelessWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MultiBlocProvider(
+//       providers: [
+//         BlocProvider<AuthBloc>(create: (context) => AuthBloc()),
+//       ],
+//       child: MaterialApp.router(
+//         theme: theme,
+//         routerConfig: _router,
+//       ),
+//     );
+//   }
+// }

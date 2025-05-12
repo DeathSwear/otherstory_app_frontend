@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../../../../theme/app_colors.dart';
 import '../../../../theme/app_text_styles.dart';
 import '../../constants/profile_page_sizes.dart';
@@ -26,7 +27,7 @@ class SettingsCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Image.asset(
+                  SvgPicture.asset(
                     icon,
                     height: ProfilePageSizes.profileIconSize,
                     width: ProfilePageSizes.profileIconSize,

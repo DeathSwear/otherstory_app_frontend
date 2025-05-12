@@ -14,4 +14,11 @@ class ImageSource {
   static const String authCode = 'assets/png/auth_code.png';
   static const String authPassword = 'assets/png/auth_password.png';
   static const String authMeeting = 'assets/png/auth_meeting.png';
+
+  static const String walletSettings = 'assets/svg/wallet_settings.svg';
+  static const String notifySettings = 'assets/svg/notify_settings.svg';
+  static const String privacySettings = 'assets/svg/privacy_settings.svg';
+  static const String decorationSettings = 'assets/svg/decotation_settings.svg';
+  static const String languageSettings = 'assets/svg/language_settings.svg';
+  static const String faq = 'assets/svg/faq.svg';
 }

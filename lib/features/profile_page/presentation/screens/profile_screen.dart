@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_strings.dart';
+import 'package:otherstory_app/theme/image_source.dart';
 import '../widgets/widgets.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -23,30 +24,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SizedBox(height: 10),
             RoundedContainerCard(children: [
               SettingsCard(
-                title: 'Управление подпиской',
-                icon: 'assets/png/wallet.png',
-              ),
+                  title: 'Управление подпиской',
+                  icon: ImageSource.walletSettings),
             ]),
             SizedBox(height: 24),
             RoundedContainerCard(children: [
               SettingsCard(
                 title: 'Уведомления и звуки',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.notifySettings,
                 showDivider: true,
               ),
               SettingsCard(
                 title: 'Приватность и безопасность',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.privacySettings,
                 showDivider: true,
               ),
               SettingsCard(
                 title: 'Оформление',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.decorationSettings,
                 showDivider: true,
               ),
               SettingsCard(
                 title: 'Язык',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.languageSettings,
                 showDivider: false,
               ),
             ]),
@@ -54,7 +54,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             RoundedContainerCard(children: [
               SettingsCard(
                 title: 'Other FAQ',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.faq,
               ),
             ]),
             SizedBox(height: 24),
