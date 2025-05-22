@@ -96,12 +96,10 @@ class FirstStepContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      child: Image.asset(
-        'assets/png/onboarding_one_step.png',
-        height: 600,
-        fit: BoxFit.cover,
-      ),
+    return Image.asset(
+      'assets/png/onboarding_one_step.png',
+      height: 600,
+      fit: BoxFit.cover,
     );
   }
 }

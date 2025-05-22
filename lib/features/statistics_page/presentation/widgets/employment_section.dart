@@ -31,10 +31,11 @@ class EmploymentSection extends StatelessWidget {
                       'assets/png/employment_section.png',
                       width: 270,
                     )),
-                const Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Positioned(
-                      child: Column(
+                Positioned(
+                  left: 16,
+                  top: 16,
+                  right: 16,
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
@@ -47,10 +48,12 @@ class EmploymentSection extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 8),
-                      Text('Нажмите, если закончили занятие',
-                          style: AppTextStyles.employmentSectionSubtitle)
+                      Text(
+                        'Нажмите, если закончили занятие',
+                        style: AppTextStyles.employmentSectionSubtitle,
+                      ),
                     ],
-                  )),
+                  ),
                 )
               ],
             )),

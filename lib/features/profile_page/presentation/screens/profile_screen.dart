@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:otherstory_app/theme/app_colors.dart';
 import 'package:otherstory_app/theme/app_strings.dart';
+import 'package:otherstory_app/theme/image_source.dart';
 import '../widgets/widgets.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -17,48 +18,54 @@ class _ProfileScreenState extends State<ProfileScreen> {
         decoration:
             const BoxDecoration(color: AppColors.profileScreenBackground),
         child: ListView(
-          children: const [
-            ProfileScreenHeader(),
-            ProfileSection(),
-            SizedBox(height: 10),
+          children: [
+            const ProfileScreenHeader(),
+            const ProfileSection(),
+            const SizedBox(height: 10),
             RoundedContainerCard(children: [
               SettingsCard(
                 title: 'Управление подпиской',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.walletIcon,
+                onPressed: () {},
               ),
             ]),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             RoundedContainerCard(children: [
               SettingsCard(
                 title: 'Уведомления и звуки',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.notifyIcon,
                 showDivider: true,
+                onPressed: () {},
               ),
               SettingsCard(
                 title: 'Приватность и безопасность',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.privacyIcon,
                 showDivider: true,
+                onPressed: () {},
               ),
               SettingsCard(
                 title: 'Оформление',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.decorationIcon,
                 showDivider: true,
+                onPressed: () {},
               ),
               SettingsCard(
                 title: 'Язык',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.languageIcon,
                 showDivider: false,
+                onPressed: () {},
               ),
             ]),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             RoundedContainerCard(children: [
               SettingsCard(
                 title: 'Other FAQ',
-                icon: 'assets/png/wallet.png',
+                icon: ImageSource.faqIcon,
+                onPressed: () {},
               ),
             ]),
-            SizedBox(height: 24),
-            AppVersion(appVersion: AppStrings.appVersion),
+            const SizedBox(height: 24),
+            const AppVersion(appVersion: AppStrings.appVersion),
           ],
         ));
   }
